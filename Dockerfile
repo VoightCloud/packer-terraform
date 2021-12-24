@@ -22,15 +22,7 @@ RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
     echo "===> Installing Hashicorp Terraform"                    && \
     wget "https://releases.hashicorp.com/terraform/1.1.2/terraform_1.1.2_linux_${ARCH}.zip" && \
     unzip "terraform_1.1.2_linux_${ARCH}.zip" -d /usr/local/bin   && \
-    rm -f "terraform_1.1.2_linux_${ARCH}.zip"                     && \
-    \
-    echo "===> Build packer-plugin-proxmox"                       && \
-    git clone https://github.com/VoightCloud/packer-plugin-proxmox.git && \
-    cd packer-plugin-proxmox                                      && \
-    go build                                                      && \
-    cp packer-plugin-proxmox /root/.packer.d/plugins              && \
-    cd ..                                                         && \
-    rm -rf packer-plugin-proxmox
+    rm -f "terraform_1.1.2_linux_${ARCH}.zip"
 
 ENV PATH="/usr/local/bin:${PATH}"
 
