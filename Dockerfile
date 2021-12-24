@@ -11,7 +11,7 @@ RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
         x86_64) export ARCH='amd64' ;; \
     esac                                                          && \
     echo "===> Adding openssl, go, and xorriso runtime..."        && \
-    apk --update add openssl xorriso go git ca-certificates       && \
+    apk --update add openssl xorriso go git curl ca-certificates  && \
     \
     echo "===> Installing Hashicorp Packer" && \
     wget "https://releases.hashicorp.com/packer/1.7.8/packer_1.7.8_linux_${ARCH}.zip" && \
