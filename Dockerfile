@@ -27,7 +27,7 @@ RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
     unzip "terraform_1.1.2_linux_${ARCH}.zip" -d /usr/local/bin   && \
     rm -f "terraform_1.1.2_linux_${ARCH}.zip"
 
-ENV PATH="/usr/local/bin:${PATH}"
+ENV PATH="/usr/local/bin:/usr/bin:${PATH}"
 
 WORKDIR /root
 
