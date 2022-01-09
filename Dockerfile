@@ -14,7 +14,7 @@ RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
     apk --update add openssl xorriso go git curl ca-certificates  && \
     \
     echo "===> Installing Ansible" && \
-    apk --update add ansible && \
+    apk --update add ansible openssh && \
     \
     echo "===> Installing Hashicorp Packer" && \
     wget "https://releases.hashicorp.com/packer/1.7.8/packer_1.7.8_linux_${ARCH}.zip" && \
